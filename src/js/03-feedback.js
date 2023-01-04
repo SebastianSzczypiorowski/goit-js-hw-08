@@ -26,14 +26,15 @@ form.addEventListener(
             email: email.value,
             message: message.value,
           };
-   
-      if (el.name) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(inputsForm));
-      }
+      
     });
   }),
   500
 );
+
+
+
 form.addEventListener('submit', e => {
   e.preventDefault();
   const currentValues = JSON.parse(localStorage.getItem(STORAGE_KEY));
