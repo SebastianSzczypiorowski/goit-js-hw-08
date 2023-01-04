@@ -5,6 +5,12 @@ const form = document.querySelector('.feedback-form');
 
 const STORAGE_KEY = 'feedback-form-state';
 
+let inputsForm;
+
+
+
+
+
 window.addEventListener('load', () => {
   Array.from(form.elements).forEach(el => {
     const currentValues = JSON.parse(localStorage.getItem(STORAGE_KEY));
