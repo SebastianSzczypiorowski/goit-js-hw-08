@@ -1,5 +1,5 @@
 
-import {throttle} from 'lodash.throttle';
+import _ from 'lodash';
 
 const form = document.querySelector('.feedback-form');
 
@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
     if (el.name === 'email') {
       el.value = currentValues.email || '';
     } else if (el.name === 'message') {
-      el.value = currentValues.message;
+      el.value = currentValues.message || '';
     }
   });
 });
