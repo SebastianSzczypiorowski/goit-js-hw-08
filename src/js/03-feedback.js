@@ -5,11 +5,6 @@ const form = document.querySelector('.feedback-form');
 
 const STORAGE_KEY = 'feedback-form-state';
 
-let inputsForm;
-
-
-
-
 
 window.addEventListener('load', () => {
   Array.from(form.elements).forEach(el => {
@@ -21,7 +16,7 @@ window.addEventListener('load', () => {
     }
   });
 });
-
+let inputsForm = {};
 form.addEventListener(
   'input',
   _.throttle(e => {
