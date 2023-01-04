@@ -21,11 +21,12 @@ form.addEventListener(
   _.throttle(e => {
     e.preventDefault();
     Array.from(form.elements).forEach(el => {
-      const { email, message } = form.elements;
-      inputsForm = {
-        email: email.value,
-        message: message.value,
-      };
+        const { email, message } = form.elements;
+        inputsForm = {
+            email: email.value,
+            message: message.value,
+          };
+   
       if (el.name) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(inputsForm));
       }
